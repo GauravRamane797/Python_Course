@@ -1,0 +1,63 @@
+
+
+
+# BlackJack Game Code
+
+import random
+
+cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10]
+
+
+def getCard():
+  return random.choice(cards)
+
+
+playerCards = []
+dealerCards = []
+
+playerCards.append(getCard())
+playerCards.append(getCard())
+dealerCards.append(getCard())
+
+print("playerCards", playerCards)
+print("dealerCards", dealerCards)
+
+pTotal = sum(playerCards)
+dTotal = sum(dealerCards)
+pPlay = True
+dPlay = True
+while pPlay:
+  playerDecision = input(
+      f"Your current total is {pTotal}, Do you want to 'hit' or 'stand'? ")
+
+  if playerDecision == "hit":
+    playerCards.append(getCard())
+    print(playerCards)
+    pTotal = sum(playerCards)
+    if pTotal > 21:
+      print(f"You busted because your total is {sum(playerCards)}")
+      pPlay = False
+      dPlay = False
+  else:
+    pPlay = False
+
+if dPlay:
+  input("Now you hit stand, let computer play his game, press ENTER !!!")
+
+# print("dplay", dPlay)
+
+while dPlay:
+  dealerCards.append(getCard())
+  print("Dealers new card set is ", dealerCards)
+  dTotal = sum(dealerCards)
+  print("Dealers total is ", dTotal)
+  if pTotal == dTotal:
+    print("It's a draw")
+    dPlay = False
+  elif dTotal > 21:
+    print(
+        f"Dealer Busted all dealers card are {dealerCards} and total is {dTotal}, Congratulations to Player on win !!!"
+    )
+    dPlay = False
+  else:
+    input("Press ENTER to get next card for dealer")
