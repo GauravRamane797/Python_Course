@@ -1,0 +1,273 @@
+# import my_module
+# print(my_module.pi)
+
+# import random
+
+# random_numnber = random.randint(0,1)
+# if random_numnber == 1:
+#    print("head")
+# else:
+#   print("tail")
+
+# name = "sumit, gaurav, vaibhav"
+# print(name.split(", "))
+
+# fruits = ["apple ,banana, cherry"]
+# for fruit in fruits:
+#   print (fruit)
+#   print(fruit + " is delicious")
+
+# student_heights = input().split()
+# for n in range(0, len(student_heights)):
+#   student_heights[n] = int(student_heights[n])
+
+# total_height = 0
+# for height in student_heights:
+#   total_height += height
+# print(total_height)
+
+# number_of_students = 0
+# for student in student_heights:
+#   number_of_students+=1
+#   print(number_of_students)
+
+# for number in range(1,11):
+#   print(number)
+
+# total = 0
+# for number in range(100, 201):
+#   print(number)
+#   if number % 2 == 0:
+#     total += number
+#   else:
+#     print(f"odd number {number}")
+# print(total)
+
+#========================================================================
+
+# for number in range(1, 101):
+#   if number % 3 == 0 and number % 5 == 0:
+#     print("fizzbuzz")
+#   elif number % 3 == 0:
+#     print("fizz")
+#   elif number % 5 == 0:
+#     print("buzz")
+#   else:
+#     print(number)
+
+# import random
+
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+
+# letters = [
+#     "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o",
+#     "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+# ]
+
+# symbols = [
+#     "+", "-", "*", "/", "^", "%", "!", "?", "=", "&", "(", ")", "[", "]", "{",
+#     "}", "|", ":", ";", ",", ".", "<", ">", "_", "~", "*"
+# ]
+
+# numbers_count = int(input("how many numbers you want: "))
+# letters_count = int(input("how many letters you want: "))
+# symbols_count = int(input("how many symbols you want: "))
+
+# users_numbers =[]
+# for num in range(0,count):
+#    random_number = random.choice(numbers)
+#    users_numbers.append(random_number)
+# print(users_numbers)
+
+# users_numbers = random.choices(numbers, k=numbers_count)
+# print(users_numbers)
+
+# users_letters = random.choices(letters, k=letters_count)
+# print(users_letters)
+
+# users_symbols = random.choices(symbols, k=symbols_count)
+# print(users_symbols)
+
+# combined_list = []
+# combined_list.extend(users_numbers)
+# combined_list.extend(users_letters)
+# combined_list.extend(users_symbols)
+
+# print(combined_list)
+
+# password = ""
+# for number in combined_list:
+#   password += str(number)
+
+# password = "abcd"
+# print(password[0],password[1],password[2],password[3])
+
+# ========================================================================
+
+# # unique_set = set()
+# # password = ""
+# # for number in combined_list:
+# #     if str(number) not in unique_set:
+# #         unique_set.add(str(number))
+# #         password += str(number)
+
+# # print("Generated Password:", password)
+
+# ========================================================================
+
+# # name = ["sumit","amit","gaurav","vaibhav"]
+# # print(len(name))
+# # na = ["sumit,amit,gaurav,vaibhav"]
+# # na1 = "sumit,amit,gaurav,vaibhav"
+# # print(len(na))
+# # print(len(na1))
+# # print(len(na[0]))
+# # for n in name:
+# #   print(n)
+
+# # name = ["sumit","amit","gaurav","vaibhav"]
+# # print("list",len(name))
+# # print("single name", (name[0]))
+# # print("single length", len(name[0]))
+# # print("single length", name[2])
+# # print("single length", (name[2][2]))
+
+# ========================================================================
+
+# travel_log = {
+#   "france":{
+#     "cities_visited": ["paris", "marseille", "lille"],
+#   }
+# }
+# print(len(travel_log["france"]["cities_visited"]))
+
+# travel_log = [
+#   {"country":"france", "cities_visited":["paris", "marseille", "lille"]},
+#   {"country":"spain"}
+# ]
+# print(travel_log[0]["cities_visited"][0])
+
+#========================================================================
+
+# count = int(input("Enter the number of bidders: "))
+# bid_price_list = [
+#     {
+#         "name": "gaurav",
+#         "bid_price": 1000
+#     },
+# ]
+
+# # Collecting bid information
+# for bidder in range(count):
+#   name = input("Enter your name: ")
+#   bid_price = int(input("Enter your bid price: "))
+#   bid_price_list.append({"name": name, "bid_price": bid_price})
+
+# print("All Bids: ", bid_price_list)
+
+# # Finding the highest bid
+# highest_bidder = None
+# highest_bid = 0
+
+# for bidder_info in bid_price_list:
+#   current_bid = bidder_info["bid_price"]
+#   if current_bid > highest_bid:
+#     highest_bid = current_bid
+#     highest_bidder = bidder_info
+
+# print("\nBid with the Highest Price:")
+# print(highest_bidder)
+
+#========================================================================
+
+# def divide(n1,n2):
+#   return n1/n2
+
+# print(divide(8,4))
+
+# var= "James Bond"
+# print(var[2::-1])
+
+# sampleList = ["Jon", "Kelly", "Jessa"]
+# sampleList.append("Scott")
+# print(sampleList)
+
+#========================================================================
+
+# append do not pass many arguments only one pass argument in a list
+
+# sampleList = ["Jon", "Kelly", "Jessa"]
+# sampleList.append(2,"Scott")
+# print(sampleList)
+# Traceback (most recent call last):
+#   File "/home/runner/Python/main.py", line 191, in <module>
+#     sampleList.append(2,"Scott")
+# TypeError: list.append() takes exactly one argument (2 given)
+
+#========================================================================
+
+# for i in range(10, 15, 1):
+#   print( i, end=', ')
+
+# salary = 8000
+
+# def printSalary():
+#   salary = 12000
+#   print("Salary:", salary)
+
+# printSalary()
+# print("Salary:", salary)
+
+#========================================================================
+# str = "pynative"
+# print (str[1:3])
+
+#========================================================================
+
+# var1 = 1
+# var2 = 2
+# var3 = "3"
+
+# print(f"{var1 +  var2} {var3}")
+
+#ERROR below down these code
+
+# var1 = 1
+# var2 = 2
+# var3 = "3"
+
+# print(var1 + var2 + var3)
+# Error. Mixing operators between numbers and strings are not supported
+
+#========================================================================
+
+# print(bool(0), bool(3.14159), bool(-3), bool(1.0+1j))
+
+#========================================================================
+
+# aTuple = (1, 'Jhon', 1+3j)
+# print(type(aTuple[2:3]))
+
+#========================================================================
+
+# print(type(range(5)))
+
+#========================================================================
+
+
+# print(type({}) is set)
+
+
+#========================================================================
+
+# print(type([]) is list)
+
+#========================================================================
+
+
+# print(type("0xFF
+
+num = 8
+print('%o' % num)
+
+#========================================================================
