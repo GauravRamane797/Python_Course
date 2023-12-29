@@ -1,0 +1,30 @@
+import random
+
+levels = {"easy": 10, "hard": 5}
+
+print("Welcome to the Number Guessing Game!")
+level = input(
+    f"I'm thinking of a number between 1 and 100.\nChoose a difficulty. Type 'easy' or 'hard': "
+)
+
+randomNumber = random.randint(1, 100)
+print("randomNumber", randomNumber)
+attempts = levels[level]
+print(f"You have {attempts} attempts remaining to guess the number.")
+
+while attempts > 0:
+  guess = int(input("Make a guess: "))
+  if guess == randomNumber:
+    print(f"You got it! The answer was {randomNumber}.")
+    break
+  elif guess > randomNumber:
+    print("Number you guessed is high.")
+    attempts -= 1
+  elif guess < randomNumber:
+    print("Number you guessed is low.")
+    attempts -= 1
+  if attempts == 0:
+    print(f"You've run out of guesses, you lose. Number was {randomNumber}.")
+    break
+  if attempts > 0:
+    print(f"You have {attempts} attempts remaining to guess the number.")
